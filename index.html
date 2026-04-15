@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>+200 Kits Festa Editáveis no Canva 🎉</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --pink: #FF3D9A;
+  --pink2: #FF6BB5;
+  --yellow: #FFD600;
+  --yellow2: #FFE566;
+  --purple: #9B5DE5;
+  --purple2: #C084FC;
+  --orange: #FF6B35;
+  --orange2: #FF9B6B;
+  --cyan: #00C9FF;
+  --cyan2: #7FDFFF;
+  --green: #00E676;
+  --white: #FFFFFF;
+  --offwhite: #FFF8FC;
+  --dark: #1A0A2E;
+  --dark2: #2D1B4E;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: var(--offwhite);
+  color: var(--dark);
+  overflow-x: hidden;
+}
+
+/* CONFETTI BACKGROUND */
+.confetti-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.confetti-piece {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  opacity: .7;
+  animation: confettiFloat linear infinite;
+}
+
+@keyframes confettiFloat {
+  0%   { transform: translateY(-20px) rotate(0deg); opacity: .8; }
+  100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+}
+
+/* HEADER RIBBON */
+.top-ribbon {
+  background: linear-gradient(90deg, var(--pink), var(--purple), var(--orange), var(--pink));
+  background-size: 300% 100%;
+  animation: ribbonShift 4s ease infinite;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: .85rem;
+  font-weight: 800;
+  letter-spacing: .03em;
+  z-index: 10;
+  position: relative;
+}
+
+@keyframes ribbonShift {
+  0%,100%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  background: linear-gradient(160deg, #1A0A2E 0%, #2D1B4E 40%, #3D0B5E 100%);
+  padding: 60px 24px 80px;
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero-bubbles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+}
+
+.b1{width:400px;height:400px;background:#FF3D9A30;top:-100px;left:-100px}
+.b2{width:300px;height:300px;background:#9B5DE530;top:50px;right:-50px}
+.b3{width:250px;height:250px;background:#FFD60025;bottom:-50px;left:30%}
+.b4{width:200px;height:200px;background:#00C9FF20;top:30%;right:10%}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, var(--yellow), var(--orange));
+  color: var(--dark);
+  font-size: .75rem;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  border-radius: 40px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 20px #FFD60066;
+  animation: popIn .6s cubic-bezier(.175,.885,.32,1.275) both;
+}
+
+@keyframes popIn {
+  from{transform:scale(0) rotate(-5deg);opacity:0}
+  to{transform:scale(1) rotate(0deg);opacity:1}
+}
+
+.hero h1 {
+  font-family: 'Fredoka One', cursive;
+  font-size: clamp(2.2rem, 7vw, 4.8rem);
+  color: white;
+  line-height: 1.1;
+  max-width: 820px;
+  margin: 0 auto 12px;
+  animation: slideUp .7s .1s ease both;
+}
+
+.hero h1 .highlight {
+  position: relative;
+  display: inline-block;
+  color: var(--yellow);
+}
+
+.hero h1 .highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0; right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--pink), var(--yellow));
+  border-radius: 3px;
+}
+
+.hero-emoji {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 8px;
+  animation: popIn .6s .05s both;
+}
+
+.hero-sub {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: rgba(255,255,255,.8);
+  max-width: 580px;
+  margin: 16px auto 40px;
+  font-weight: 600;
+  animation: slideUp .7s .2s ease both;
+}
+
+.hero-sub strong { color: var(--yellow); }
+
+@keyframes slideUp {
+  from{opacity:0;transform:translateY(24px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* CTA BUTTONS */
+.btn-main {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, var(--yellow), var(--orange));
+  color: var(--dark);
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.15rem;
+  letter-spacing: .02em;
+  padding: 18px 44px;
+  border-radius: 60px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 8px 32px #FFD60066, 0 2px 0 #CC8800;
+  transition: transform .15s, box-shadow .15s;
+  animation: slideUp .7s .3s ease both;
+}
+
+.btn-main:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 40px #FFD60088, 0 2px 0 #CC8800;
+}
+
+.btn-main:active { transform: translateY(0) scale(.98); }
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  font-size: .9rem;
+  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: 40px;
+  border: 2px solid rgba(255,255,255,.35);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all .2s;
+  margin-left: 12px;
+}
+
+.btn-secondary:hover {
+  border-color: var(--pink2);
+  color: var(--pink2);
+}
+
+/* HERO STATS */
+.hero-stats {
+  display: flex;
+  gap: 0;
+  justify-content: center;
+  margin-top: 48px;
+  animation: slideUp .7s .4s ease both;
+  flex-wrap: wrap;
+}
+
+.hstat {
+  text-align: center;
+  padding: 16px 28px;
+  position: relative;
+}
+
+.hstat:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0; top: 20%; bottom: 20%;
+  width: 1px;
+  background: rgba(255,255,255,.2);
+}
+
+.hstat-num {
+  font-family: 'Fredoka One', cursive;
+  font-size: 2rem;
+  color: var(--yellow);
+  display: block;
+  line-height: 1;
+}
+
+.hstat-label {
+  font-size: .75rem;
+  color: rgba(255,255,255,.6);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-top: 4px;
+}
+
+/* BALLOONS DECORATIVE */
+.balloons-row {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 32px;
+  font-size: 2rem;
+  animation: slideUp .7s .5s ease both;
+}
+
+.balloon { display: inline-block; animation: balloonBob ease-in-out infinite; }
+.balloon:nth-child(1){animation-duration:2.2s;animation-delay:0s}
+.balloon:nth-child(2){animation-duration:2.5s;animation-delay:.3s}
+.balloon:nth-child(3){animation-duration:2.0s;animation-delay:.6s}
+.balloon:nth-child(4){animation-duration:2.8s;animation-delay:.1s}
+.balloon:nth-child(5){animation-duration:2.3s;animation-delay:.8s}
+
+@keyframes balloonBob {
+  0%,100%{transform:translateY(0) rotate(-3deg)}
+  50%{transform:translateY(-10px) rotate(3deg)}
+}
+
+/* SECTIONS GENERAL */
+section { position: relative; z-index: 1; }
+
+.section-tag {
+  display: inline-block;
+  font-size: .72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  padding: 5px 16px;
+  border-radius: 30px;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: 'Fredoka One', cursive;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+
+.section-sub {
+  font-size: 1rem;
+  color: #6B5B7B;
+  max-width: 520px;
+  margin: 0 auto 40px;
+}
+
+/* VIDEO SECTION */
+.video-section {
+  padding: 64px 24px;
+  background: white;
+  text-align: center;
+}
+
+.video-tag { background: #FF3D9A22; color: var(--pink); }
+
+.video-wrapper {
+  max-width: 760px;
+  margin: 0 auto 32px;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 20px 80px rgba(155, 93, 229, .25);
+  border: 4px solid var(--purple);
+}
+
+.video-placeholder {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: linear-gradient(135deg, var(--dark), var(--dark2));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  cursor: pointer;
+  transition: opacity .2s;
+}
+
+.video-placeholder:hover { opacity: .9; }
+
+.play-btn {
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--pink), var(--purple));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.8rem;
+  box-shadow: 0 8px 32px rgba(255, 61, 154, .5);
+  transition: transform .2s;
+  cursor: pointer;
+  border: none;
+  color: white;
+}
+
+.play-btn:hover { transform: scale(1.1); }
+
+.video-caption {
+  color: rgba(255,255,255,.7);
+  font-size: .9rem;
+  font-weight: 700;
+}
+
+/* WHAT YOU GET */
+.get-section {
+  padding: 72px 24px;
+  background: linear-gradient(180deg, var(--offwhite), #FFF0FA);
+  text-align: center;
+}
+
+.get-tag { background: #9B5DE522; color: var(--purple); }
+
+.get-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.get-card {
+  background: white;
+  border-radius: 20px;
+  padding: 28px 20px;
+  border: 2px solid transparent;
+  transition: transform .2s, border-color .2s, box-shadow .2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.get-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--card-top, linear-gradient(90deg, var(--pink), var(--purple)));
+}
+
+.get-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--pink);
+  box-shadow: 0 12px 40px rgba(255, 61, 154, .15);
+}
+
+.get-icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.get-card h3 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+  color: var(--dark);
+}
+
+.get-card p {
+  font-size: .83rem;
+  color: #6B5B7B;
+  line-height: 1.5;
+}
+
+/* KIT CONTENTS */
+.kit-section {
+  padding: 72px 24px;
+  background: linear-gradient(135deg, var(--dark) 0%, var(--dark2) 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.kit-section::before {
+  content: '🎉🎊🎈🎁🎀';
+  position: absolute;
+  font-size: 8rem;
+  opacity: .05;
+  top: -20px; right: -40px;
+  letter-spacing: -1rem;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.kit-tag { background: #FFD60022; color: var(--yellow); }
+.kit-section .section-title { color: white; }
+.kit-section .section-sub { color: rgba(255,255,255,.6); }
+
+.kit-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  max-width: 700px;
+  margin: 0 auto 32px;
+}
+
+.kit-item {
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 50px;
+  padding: 10px 22px;
+  color: white;
+  font-size: .9rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all .2s;
+}
+
+.kit-item:hover {
+  background: rgba(255, 61, 154, .25);
+  border-color: var(--pink2);
+  transform: scale(1.04);
+}
+
+.kit-highlight {
+  background: linear-gradient(135deg, #FFD60022, #FF6B3522);
+  border: 2px solid var(--yellow);
+  border-radius: 20px;
+  padding: 20px 32px;
+  max-width: 500px;
+  margin: 0 auto;
+  color: var(--yellow);
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+/* DIFFERENCIAL */
+.diff-section {
+  padding: 72px 24px;
+  background: white;
+  text-align: center;
+}
+
+.diff-tag { background: #00C9FF22; color: var(--cyan); }
+
+.diff-cards {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 16px;
+  max-width: 740px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.diff-side {
+  background: var(--offwhite);
+  border: 2px solid #E8E0F0;
+  border-radius: 20px;
+  padding: 28px 24px;
+}
+
+.diff-side.bad { border-color: #FFD0D0; background: #FFF5F5; }
+.diff-side.good { border-color: #D0FFE8; background: #F0FFF6; }
+
+.diff-icon { font-size: 2.5rem; margin-bottom: 12px; }
+.diff-label {
+  font-family: 'Fredoka One', cursive;
+  font-size: .9rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-bottom: 8px;
+}
+.diff-side.bad .diff-label { color: #E05060; }
+.diff-side.good .diff-label { color: #00A060; }
+
+.diff-text { font-size: .88rem; color: #6B5B7B; line-height: 1.5; }
+.diff-vs { font-family: 'Fredoka One', cursive; font-size: 1.8rem; color: var(--purple); text-align: center; }
+
+/* BENEFITS */
+.benefits-section {
+  padding: 72px 24px;
+  background: linear-gradient(180deg, #FFF0FA, #F0E8FF);
+  text-align: center;
+}
+
+.benefits-tag { background: #FF6B3522; color: var(--orange); }
+
+.benefits-list {
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.benefit-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: white;
+  border-radius: 16px;
+  padding: 16px 22px;
+  text-align: left;
+  border: 2px solid transparent;
+  transition: all .2s;
+}
+
+.benefit-row:hover {
+  border-color: var(--orange);
+  transform: translateX(4px);
+  box-shadow: 0 4px 20px rgba(255, 107, 53, .15);
+}
+
+.benefit-check {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--green), #00B060);
+  display: flex; align-items: center; justify-content: center;
+  color: white;
+  font-size: 1rem;
+  flex-shrink: 0;
+  font-weight: 900;
+}
+
+.benefit-text { font-weight: 700; font-size: .95rem; color: var(--dark); }
+.benefit-sub { font-size: .8rem; color: #6B5B7B; margin-top: 2px; }
+
+/* PRICING */
+.pricing-section {
+  padding: 72px 24px 80px;
+  background: linear-gradient(160deg, var(--dark) 0%, #3D0B5E 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-section::before {
+  content: '✨';
+  font-size: 20rem;
+  position: absolute;
+  top: -60px; right: -60px;
+  opacity: .03;
+  pointer-events: none;
+}
+
+.pricing-section .section-title { color: white; }
+.pricing-section .section-sub { color: rgba(255,255,255,.65); }
+
+.price-tag-wrap { background: #FFD60020; color: var(--yellow); }
+
+.countdown {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 214, 0, .1);
+  border: 2px solid rgba(255, 214, 0, .4);
+  border-radius: 50px;
+  padding: 10px 24px;
+  margin-bottom: 40px;
+  color: var(--yellow);
+  font-weight: 800;
+  font-size: .9rem;
+}
+
+.cd-units { display: flex; gap: 6px; align-items: center; }
+.cd-box { text-align: center; }
+.cd-num {
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 8px;
+  padding: 4px 10px;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.4rem;
+  color: white;
+  display: block;
+  min-width: 42px;
+}
+.cd-lbl { font-size: .6rem; text-transform: uppercase; margin-top: 3px; color: rgba(255,255,255,.5); }
+.cd-colon { font-size: 1.2rem; color: rgba(255,255,255,.4); margin-bottom: 8px; }
+
+.price-card {
+  background: white;
+  border-radius: 32px;
+  padding: 48px 40px;
+  max-width: 480px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0,0,0,.4);
+}
+
+.price-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--pink), var(--purple), var(--yellow), var(--orange));
+}
+
+.price-card-badge {
+  position: absolute;
+  top: 20px; right: -16px;
+  background: linear-gradient(135deg, var(--pink), var(--orange));
+  color: white;
+  font-size: .7rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  padding: 6px 20px 6px 12px;
+  border-radius: 4px 0 0 4px;
+  box-shadow: -2px 2px 10px rgba(255,61,154,.4);
+}
+
+.old-price {
+  font-size: 1rem;
+  color: #999;
+  text-decoration: line-through;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.new-price {
+  font-family: 'Fredoka One', cursive;
+  font-size: 4.5rem;
+  line-height: 1;
+  color: var(--dark);
+  margin-bottom: 4px;
+}
+
+.new-price sup { font-size: 1.5rem; }
+
+.price-note {
+  font-size: .85rem;
+  color: #6B5B7B;
+  margin-bottom: 28px;
+  font-weight: 600;
+}
+
+.price-divider { height: 2px; background: #F0E8F8; margin: 20px 0; border-radius: 2px; }
+
+.price-features { text-align: left; margin-bottom: 28px; }
+
+.price-feat {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  font-size: .92rem;
+  font-weight: 700;
+  color: var(--dark);
+  border-bottom: 1px solid #F5F0FA;
+}
+
+.price-feat:last-child { border: none; }
+
+.price-feat-icon {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--green), #00B060);
+  display: flex; align-items: center; justify-content: center;
+  color: white;
+  font-size: .75rem;
+  flex-shrink: 0;
+  font-weight: 900;
+}
+
+.btn-buy {
+  display: block;
+  width: 100%;
+  background: linear-gradient(135deg, var(--pink), var(--purple));
+  color: white;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.25rem;
+  padding: 18px;
+  border-radius: 60px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(155, 93, 229, .5);
+  transition: transform .15s, box-shadow .15s;
+  letter-spacing: .02em;
+}
+
+.btn-buy:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(155, 93, 229, .65);
+}
+
+.guarantee-mini {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+  font-size: .82rem;
+  color: #6B5B7B;
+  font-weight: 700;
+}
+
+/* GUARANTEE */
+.guarantee-section {
+  padding: 56px 24px;
+  background: white;
+  text-align: center;
+}
+
+.guarantee-box {
+  max-width: 560px;
+  margin: 0 auto;
+  border: 3px solid var(--green);
+  border-radius: 24px;
+  padding: 36px;
+  background: #F0FFF6;
+  position: relative;
+}
+
+.guarantee-emoji { font-size: 3.5rem; margin-bottom: 12px; display: block; }
+
+.guarantee-box h3 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.6rem;
+  color: #00A060;
+  margin-bottom: 8px;
+}
+
+.guarantee-box p { color: #2D6040; font-size: .95rem; line-height: 1.6; font-weight: 600; }
+
+/* THEMES SCROLLER */
+.themes-section {
+  padding: 56px 0;
+  background: var(--offwhite);
+  overflow: hidden;
+}
+
+.themes-section .inner { padding: 0 24px; text-align: center; margin-bottom: 28px; }
+.themes-tag { background: #FFD60022; color: #CC8800; }
+
+.themes-ticker {
+  display: flex;
+  gap: 12px;
+  animation: tickerScroll 25s linear infinite;
+  width: max-content;
+}
+
+.theme-chip {
+  background: white;
+  border: 2px solid var(--chip-color, #E8E0F0);
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: .85rem;
+  font-weight: 800;
+  color: var(--chip-color, var(--purple));
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@keyframes tickerScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* FOOTER */
+footer {
+  background: var(--dark);
+  color: rgba(255,255,255,.5);
+  text-align: center;
+  padding: 32px 24px;
+  font-size: .8rem;
+}
+
+/* SCROLL FADE */
+.fade-up {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .6s, transform .6s;
+}
+.fade-up.visible { opacity: 1; transform: none; }
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  .diff-cards { grid-template-columns: 1fr; }
+  .diff-vs { padding: 8px 0; }
+  .hero-stats { gap: 0; }
+  .btn-secondary { margin-left: 0; margin-top: 12px; }
+  .hero .cta-group { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+}
+</style>
+</head>
+<body>
+
+<!-- CONFETTI -->
+<div class="confetti-bg" id="confetti-bg"></div>
+
+<!-- TOP RIBBON -->
+<div class="top-ribbon">🎉 OFERTA RELÂMPAGO · Últimas vagas a R$ 11,99 · Acesso Vitalício 🎉</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bubbles">
+    <div class="bubble b1"></div>
+    <div class="bubble b2"></div>
+    <div class="bubble b3"></div>
+    <div class="bubble b4"></div>
+  </div>
+
+  <span class="hero-emoji">🎁</span>
+  <div class="hero-badge">🔥 +3.200 festeiras já compraram</div>
+
+  <h1>+200 Kits Festa<br><span class="highlight">Editáveis no Canva</span> 🎉</h1>
+
+  <p class="hero-sub">
+    Crie festas <strong>lindas, personalizadas e profissionais</strong> em minutos —<br>
+    mesmo sem experiência! Economize tempo e dinheiro com artes<br>prontas que você edita direto no celular.
+  </p>
+
+  <div class="cta-group">
+    <a href="#planos" class="btn-main">🎈 Quero meus Kits Agora!</a>
+    <a href="#video" class="btn-secondary">▶ Ver como funciona</a>
+  </div>
+
+  <div class="hero-stats">
+    <div class="hstat">
+      <span class="hstat-num">+200</span>
+      <div class="hstat-label">Kits prontos</div>
+    </div>
+    <div class="hstat">
+      <span class="hstat-num">100%</span>
+      <div class="hstat-label">Editável no Canva</div>
+    </div>
+    <div class="hstat">
+      <span class="hstat-num">+3.200</span>
+      <div class="hstat-label">Festeiras felizes</div>
+    </div>
+    <div class="hstat">
+      <span class="hstat-num">7 dias</span>
+      <div class="hstat-label">Garantia total</div>
+    </div>
+  </div>
+
+  <div class="balloons-row">
+    <span class="balloon">🎈</span>
+    <span class="balloon">🎊</span>
+    <span class="balloon">🎁</span>
+    <span class="balloon">🎀</span>
+    <span class="balloon">🎉</span>
+  </div>
+</section>
+
+<!-- THEMES TICKER -->
+<section class="themes-section">
+  <div class="inner">
+    <span class="section-tag themes-tag">Temas disponíveis</span>
+    <h2 class="section-title fade-up">Para <span style="color:var(--pink)">todos</span> os temas!</h2>
+  </div>
+  <div style="overflow:hidden">
+    <div class="themes-ticker">
+      <div class="theme-chip" style="--chip-color:#FF3D9A">🦄 Unicórnio</div>
+      <div class="theme-chip" style="--chip-color:#9B5DE5">🦸 Super-Heróis</div>
+      <div class="theme-chip" style="--chip-color:#00C9FF">🧊 Frozen</div>
+      <div class="theme-chip" style="--chip-color:#FF6B35">🦁 Safari</div>
+      <div class="theme-chip" style="--chip-color:#FFD600;color:#8B6800">🍦 Sorvete</div>
+      <div class="theme-chip" style="--chip-color:#00E676;color:#006030">🦕 Dinossauro</div>
+      <div class="theme-chip" style="--chip-color:#FF3D9A">👸 Princesa</div>
+      <div class="theme-chip" style="--chip-color:#9B5DE5">🚀 Espaço</div>
+      <div class="theme-chip" style="--chip-color:#FF6B35">🐠 Fundo do Mar</div>
+      <div class="theme-chip" style="--chip-color:#00C9FF">⚽ Futebol</div>
+      <div class="theme-chip" style="--chip-color:#FFD600;color:#8B6800">🎮 Games</div>
+      <div class="theme-chip" style="--chip-color:#FF3D9A">🌸 Adulto Feminino</div>
+      <div class="theme-chip" style="--chip-color:#9B5DE5">🎩 Adulto Masculino</div>
+      <div class="theme-chip" style="--chip-color:#00E676;color:#006030">🍀 São João</div>
+      <div class="theme-chip" style="--chip-color:#FF6B35">🎃 Halloween</div>
+      <div class="theme-chip" style="--chip-color:#00C9FF">🎄 Natal</div>
+      <!-- duplicado para loop -->
+      <div class="theme-chip" style="--chip-color:#FF3D9A">🦄 Unicórnio</div>
+      <div class="theme-chip" style="--chip-color:#9B5DE5">🦸 Super-Heróis</div>
+      <div class="theme-chip" style="--chip-color:#00C9FF">🧊 Frozen</div>
+      <div class="theme-chip" style="--chip-color:#FF6B35">🦁 Safari</div>
+      <div class="theme-chip" style="--chip-color:#FFD600;color:#8B6800">🍦 Sorvete</div>
+      <div class="theme-chip" style="--chip-color:#00E676;color:#006030">🦕 Dinossauro</div>
+      <div class="theme-chip" style="--chip-color:#FF3D9A">👸 Princesa</div>
+      <div class="theme-chip" style="--chip-color:#9B5DE5">🚀 Espaço</div>
+      <div class="theme-chip" style="--chip-color:#FF6B35">🐠 Fundo do Mar</div>
+      <div class="theme-chip" style="--chip-color:#00C9FF">⚽ Futebol</div>
+      <div class="theme-chip" style="--chip-color:#FFD600;color:#8B6800">🎮 Games</div>
+      <div class="theme-chip" style="--chip-color:#FF3D9A">🌸 Adulto Feminino</div>
+      <div class="theme-chip" style="--chip-color:#9B5DE5">🎩 Adulto Masculino</div>
+      <div class="theme-chip" style="--chip-color:#00E676;color:#006030">🍀 São João</div>
+      <div class="theme-chip" style="--chip-color:#FF6B35">🎃 Halloween</div>
+      <div class="theme-chip" style="--chip-color:#00C9FF">🎄 Natal</div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO SECTION -->
+<section class="video-section" id="video">
+  <span class="section-tag video-tag">Apresentação do produto</span>
+  <h2 class="section-title fade-up">Veja como é <span style="color:var(--pink)">fácil</span> de usar! 🎬</h2>
+  <p class="section-sub fade-up">Assista e descubra como criar festas incríveis em poucos minutos</p>
+
+  <div class="video-wrapper fade-up">
+    <div class="video-placeholder" id="videoBlock">
+      <button class="play-btn" onclick="loadVideo()">▶</button>
+      <p class="video-caption">▶ Clique para assistir a apresentação completa</p>
+    </div>
+  </div>
+
+  <a href="#planos" class="btn-main fade-up" style="font-size:1.05rem">
+    🎁 Quero saber mais e garantir o meu!
+  </a>
+</section>
+
+<!-- WHAT YOU GET -->
+<section class="get-section">
+  <span class="section-tag get-tag">O que você recebe</span>
+  <h2 class="section-title fade-up">Tudo que você precisa para criar <span style="color:var(--purple)">festas perfeitas</span> 🎊</h2>
+  <p class="section-sub fade-up">Acesso imediato após a compra — sem esperar nada chegar</p>
+
+  <div class="get-grid">
+    <div class="get-card fade-up" style="--card-top:linear-gradient(90deg,#FF3D9A,#FF6BB5)">
+      <span class="get-icon">🎨</span>
+      <h3>+200 Kits Completos</h3>
+      <p>Kits para festas infantis, adultos e datas comemorativas. Tem tema pra todo mundo!</p>
+    </div>
+    <div class="get-card fade-up" style="--card-top:linear-gradient(90deg,#9B5DE5,#C084FC)">
+      <span class="get-icon">📱</span>
+      <h3>100% Editável no Canva</h3>
+      <p>Edite pelo celular ou computador. Não precisa instalar nenhum programa complicado.</p>
+    </div>
+    <div class="get-card fade-up" style="--card-top:linear-gradient(90deg,#00C9FF,#7FDFFF)">
+      <span class="get-icon">⚡</span>
+      <h3>Acesso Imediato</h3>
+      <p>Pagou, recebeu na hora! Link chegando no seu e-mail e WhatsApp em segundos.</p>
+    </div>
+    <div class="get-card fade-up" style="--card-top:linear-gradient(90deg,#FFD600,#FF6B35)">
+      <span class="get-icon">🔄</span>
+      <h3>Atualizações Inclusas</h3>
+      <p>Novos kits sendo adicionados constantemente. Você paga uma vez e recebe para sempre.</p>
+    </div>
+    <div class="get-card fade-up" style="--card-top:linear-gradient(90deg,#00E676,#00C9FF)">
+      <span class="get-icon">🎓</span>
+      <h3>Aulas de Edição</h3>
+      <p>Tutorial passo a passo ensinando como personalizar cada elemento do seu kit.</p>
+    </div>
+    <div class="get-card fade-up" style="--card-top:linear-gradient(90deg,#FF6B35,#FF3D9A)">
+      <span class="get-icon">🛡️</span>
+      <h3>Garantia de 7 Dias</h3>
+      <p>Não gostou? Devolvemos 100% do seu dinheiro. Sem perguntas, sem complicação.</p>
+    </div>
+  </div>
+</section>
+
+<!-- KIT CONTENTS -->
+<section class="kit-section">
+  <span class="section-tag kit-tag">Dentro de cada kit</span>
+  <h2 class="section-title fade-up">O que tem em <span style="color:var(--yellow)">cada kit</span> 🎀</h2>
+  <p class="section-sub fade-up" style="color:rgba(255,255,255,.6)">Tudo pronto, é só editar nome, idade e imprimir!</p>
+
+  <div class="kit-items fade-up">
+    <div class="kit-item">🎂 Topo de Bolo</div>
+    <div class="kit-item">🍭 Toppers para Doces</div>
+    <div class="kit-item">💌 Convite Digital</div>
+    <div class="kit-item">🏷️ Rótulos Personalizados</div>
+    <div class="kit-item">🎏 Bandeirolas</div>
+    <div class="kit-item">🎁 Tags e Lembrancinhas</div>
+    <div class="kit-item">📋 Caixinhas de Doce</div>
+    <div class="kit-item">🎈 Painel de Fundo</div>
+    <div class="kit-item">📦 Embalagens</div>
+    <div class="kit-item">🪅 Adesivos Decorativos</div>
+  </div>
+
+  <div class="kit-highlight fade-up">
+    💡 Tudo pronto — é só editar nome, idade e imprimir!
+  </div>
+</section>
+
+<!-- DIFFERENCIAL -->
+<section class="diff-section">
+  <span class="section-tag diff-tag">O grande diferencial</span>
+  <h2 class="section-title fade-up">Por que escolher <span style="color:var(--purple)">este material</span>? 🚀</h2>
+  <p class="section-sub fade-up">Diferente de outros arquivos que precisam de programas complicados...</p>
+
+  <div class="diff-cards fade-up">
+    <div class="diff-side bad">
+      <div class="diff-icon">😰</div>
+      <div class="diff-label">Outros arquivos</div>
+      <p class="diff-text">Precisam de Silhouette Studio, Illustrator ou programas técnicos que confundem quem não é designer.</p>
+    </div>
+    <div class="diff-vs">VS</div>
+    <div class="diff-side good">
+      <div class="diff-icon">🎉</div>
+      <div class="diff-label">Nossos kits</div>
+      <p class="diff-text">Você edita <strong>TUDO direto no Canva</strong> — pelo celular ou computador, em poucos minutos, mesmo sem saber design!</p>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="benefits-section">
+  <span class="section-tag benefits-tag">Benefícios diretos</span>
+  <h2 class="section-title fade-up">O que você pode fazer <span style="color:var(--orange)">com isso</span> 💰</h2>
+  <p class="section-sub fade-up">Além de criar festas lindas para a família...</p>
+
+  <div class="benefits-list">
+    <div class="benefit-row fade-up">
+      <div class="benefit-check">✓</div>
+      <div>
+        <div class="benefit-text">🏠 Fazer suas próprias festas gastando muito menos</div>
+        <div class="benefit-sub">Economize centenas de reais em decoração personalizada</div>
+      </div>
+    </div>
+    <div class="benefit-row fade-up">
+      <div class="benefit-check">✓</div>
+      <div>
+        <div class="benefit-text">💼 Começar a vender kits personalizados hoje mesmo</div>
+        <div class="benefit-sub">Use como base para vender serviços de personalização de festas</div>
+      </div>
+    </div>
+    <div class="benefit-row fade-up">
+      <div class="benefit-check">✓</div>
+      <div>
+        <div class="benefit-text">💰 Criar uma renda extra com papelaria digital</div>
+        <div class="benefit-sub">Mercado de papelaria digital em pleno crescimento no Brasil</div>
+      </div>
+    </div>
+    <div class="benefit-row fade-up">
+      <div class="benefit-check">✓</div>
+      <div>
+        <div class="benefit-text">⏱️ Economizar horas de trabalho criativo</div>
+        <div class="benefit-sub">Arte pronta = você foca só na personalização e entrega</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing-section" id="planos">
+  <span class="section-tag price-tag-wrap">💸 Oferta por tempo limitado</span>
+  <h2 class="section-title fade-up">Garanta agora pelo <span style="color:var(--yellow)">menor preço!</span> 🔥</h2>
+  <p class="section-sub fade-up">Essa oferta pode encerrar a qualquer momento</p>
+
+  <div class="countdown fade-up">
+    ⏰ Oferta expira em:
+    <div class="cd-units">
+      <div class="cd-box"><span class="cd-num" id="cd-h">02</span><div class="cd-lbl">Horas</div></div>
+      <div class="cd-colon">:</div>
+      <div class="cd-box"><span class="cd-num" id="cd-m">59</span><div class="cd-lbl">Min</div></div>
+      <div class="cd-colon">:</div>
+      <div class="cd-box"><span class="cd-num" id="cd-s">59</span><div class="cd-lbl">Seg</div></div>
+    </div>
+  </div>
+
+  <div class="price-card fade-up">
+    <div class="price-card-badge">🔥 PROMOÇÃO</div>
+
+    <p class="old-price">De R$ 97,00 por apenas</p>
+    <div class="new-price"><sup>R$</sup>11<span style="font-size:2rem">,99</span></div>
+    <p class="price-note">Pagamento único · Acesso vitalício completo</p>
+
+    <div class="price-divider"></div>
+
+    <div class="price-features">
+      <div class="price-feat"><span class="price-feat-icon">✓</span> +200 Kits Festa Editáveis</div>
+      <div class="price-feat"><span class="price-feat-icon">✓</span> Temas infantis, adultos e datas comemorativas</div>
+      <div class="price-feat"><span class="price-feat-icon">✓</span> 100% editável no Canva (celular ou PC)</div>
+      <div class="price-feat"><span class="price-feat-icon">✓</span> Acesso imediato após a compra</div>
+      <div class="price-feat"><span class="price-feat-icon">✓</span> Aulas de edição passo a passo</div>
+      <div class="price-feat"><span class="price-feat-icon">✓</span> Atualizações futuras inclusas</div>
+    </div>
+
+    <a href="#" class="btn-buy">🎉 QUERO MEUS +200 KITS AGORA!</a>
+
+    <div class="guarantee-mini">
+      🔒 Pagamento seguro &nbsp;|&nbsp; ✅ Garantia 7 dias
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<section class="guarantee-section">
+  <div class="guarantee-box fade-up">
+    <span class="guarantee-emoji">🛡️</span>
+    <h3>Garantia Incondicional de 7 Dias</h3>
+    <p>Se você não ficar 100% satisfeita com o material por qualquer motivo, devolvemos <strong>todo o seu dinheiro</strong>. Sem burocracia, sem perguntas, sem complicação. Você não tem nada a perder!</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p style="font-size:1.5rem;margin-bottom:8px">🎉🎈🎁🎊🎀</p>
+  <p>© 2025 Kits Festa Editáveis · Todos os direitos reservados</p>
+  <p style="margin-top:6px">Acesso imediato · Pagamento 100% seguro · Garantia de 7 dias</p>
+</footer>
+
+<script>
+// CONFETTI
+const colors = ['#FF3D9A','#FFD600','#9B5DE5','#00C9FF','#FF6B35','#00E676'];
+const shapes = ['circle','square','rect'];
+const confettiContainer = document.getElementById('confetti-bg');
+
+for (let i = 0; i < 40; i++) {
+  const el = document.createElement('div');
+  el.className = 'confetti-piece';
+  const color = colors[Math.floor(Math.random() * colors.length)];
+  const size = 6 + Math.random() * 10;
+  const left = Math.random() * 100;
+  const duration = 6 + Math.random() * 10;
+  const delay = Math.random() * 12;
+  const shape = shapes[Math.floor(Math.random() * shapes.length)];
+  el.style.cssText = `
+    left:${left}%;
+    width:${size}px;
+    height:${shape==='rect'?size*2:size}px;
+    background:${color};
+    border-radius:${shape==='circle'?'50%':'3px'};
+    animation-duration:${duration}s;
+    animation-delay:${delay}s;
+  `;
+  confettiContainer.appendChild(el);
+}
+
+// COUNTDOWN
+let secs = 2*3600 + 59*60 + 59;
+function tick(){
+  secs = Math.max(0, secs-1);
+  const h = Math.floor(secs/3600);
+  const m = Math.floor((secs%3600)/60);
+  const s = secs%60;
+  document.getElementById('cd-h').textContent = String(h).padStart(2,'0');
+  document.getElementById('cd-m').textContent = String(m).padStart(2,'0');
+  document.getElementById('cd-s').textContent = String(s).padStart(2,'0');
+}
+setInterval(tick, 1000);
+
+// SCROLL FADE
+const obs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const siblings = e.target.parentElement?.querySelectorAll('.fade-up');
+      if(siblings){
+        siblings.forEach((s,i)=>{
+          setTimeout(()=>s.classList.add('visible'), i*90);
+        });
+      } else {
+        e.target.classList.add('visible');
+      }
+    }
+  });
+},{threshold:.1});
+document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+
+// VIDEO PLACEHOLDER (substituir pela URL real do vídeo)
+function loadVideo() {
+  const block = document.getElementById('videoBlock');
+  block.innerHTML = `
+    <iframe 
+      width="100%" 
+      style="aspect-ratio:16/9;border:none"
+      src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+      allow="autoplay; fullscreen"
+      allowfullscreen>
+    </iframe>`;
+}
+</script>
+</body>
+</html>
