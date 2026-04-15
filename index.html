@@ -58,9 +58,7 @@ body {
 
 /* HEADER RIBBON */
 .top-ribbon {
-  background: linear-gradient(90deg, var(--pink), var(--purple), var(--orange), var(--pink));
-  background-size: 300% 100%;
-  animation: ribbonShift 4s ease infinite;
+  background: #D00000;
   color: white;
   text-align: center;
   padding: 10px;
@@ -69,11 +67,6 @@ body {
   letter-spacing: .03em;
   z-index: 10;
   position: relative;
-}
-
-@keyframes ribbonShift {
-  0%,100%{background-position:0% 50%}
-  50%{background-position:100% 50%}
 }
 
 /* HERO */
@@ -326,11 +319,11 @@ section { position: relative; z-index: 1; }
 .video-wrapper {
   max-width: 760px;
   margin: 0 auto 32px;
-  border-radius: 24px;
+  border-radius: 28px;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 20px 80px rgba(155, 93, 229, .25);
-  border: 4px solid var(--purple);
+  box-shadow: 0 0 0 5px #fff, 0 0 0 9px var(--pink), 0 0 0 13px var(--purple), 0 24px 80px rgba(155,93,229,.4);
+  border: none;
 }
 
 .video-placeholder {
@@ -1029,10 +1022,6 @@ footer {
 
 <!-- VIDEO SECTION -->
 <section class="video-section" id="video">
-  <span class="section-tag video-tag">Apresentação do produto</span>
-  <h2 class="section-title fade-up">Veja como é <span style="color:var(--pink)">fácil</span> de usar! 🎬</h2>
-  <p class="section-sub fade-up">Assista e descubra como criar festas incríveis em poucos minutos</p>
-
   <div class="video-wrapper fade-up">
     <div id="videoBlock" style="width:100%;aspect-ratio:16/9">
       <iframe
@@ -1047,7 +1036,7 @@ footer {
     </div>
   </div>
 
-  <a href="#planos" class="btn-main fade-up" style="font-size:1.05rem">
+  <a href="#planos" class="btn-main fade-up" style="font-size:1.05rem;margin-top:8px">
     🎁 Quero saber mais e garantir o meu!
   </a>
 </section>
