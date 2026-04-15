@@ -820,6 +820,82 @@ section { position: relative; z-index: 1; }
   100% { transform: translateX(-50%); }
 }
 
+/* TESTIMONIALS */
+.testimonials-section {
+  padding: 72px 24px;
+  background: linear-gradient(180deg, #FFF0FA, #F5EEFF);
+  text-align: center;
+}
+
+.testimonials-tag { background: #FF3D9A22; color: var(--pink); }
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background: white;
+  border-radius: 20px;
+  padding: 28px 24px;
+  text-align: left;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 20px rgba(155,93,229,.08);
+  transition: transform .2s, border-color .2s, box-shadow .2s;
+  position: relative;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--pink2);
+  box-shadow: 0 12px 40px rgba(255,61,154,.15);
+}
+
+.testimonial-stars {
+  color: var(--yellow);
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  letter-spacing: 2px;
+}
+
+.testimonial-text {
+  font-size: .93rem;
+  color: #4A3B5C;
+  line-height: 1.65;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.testimonial-avatar {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--avatar-bg, linear-gradient(135deg, var(--pink), var(--purple)));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.testimonial-name {
+  font-weight: 800;
+  font-size: .9rem;
+  color: var(--dark);
+}
+
+.testimonial-location {
+  font-size: .75rem;
+  color: #9B8BAB;
+  margin-top: 2px;
+}
+
 /* FOOTER */
 footer {
   background: var(--dark);
@@ -876,7 +952,6 @@ footer {
 
   <div class="cta-group">
     <a href="#planos" class="btn-main">🎈 Quero meus Kits Agora!</a>
-    <a href="#video" class="btn-secondary">▶ Ver como funciona</a>
   </div>
 
   <div class="hero-stats">
@@ -959,9 +1034,16 @@ footer {
   <p class="section-sub fade-up">Assista e descubra como criar festas incríveis em poucos minutos</p>
 
   <div class="video-wrapper fade-up">
-    <div class="video-placeholder" id="videoBlock">
-      <button class="play-btn" onclick="loadVideo()">▶</button>
-      <p class="video-caption">▶ Clique para assistir a apresentação completa</p>
+    <div id="videoBlock" style="width:100%;aspect-ratio:16/9">
+      <iframe
+        src="https://player.vimeo.com/video/1183221727?badge=0&autopause=0&player_id=0&app_id=58479"
+        width="100%"
+        height="100%"
+        style="border:none;display:block"
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+        allowfullscreen
+        title="Kits Festa Editáveis no Canva">
+      </iframe>
     </div>
   </div>
 
@@ -1055,39 +1137,83 @@ footer {
   </div>
 </section>
 
-<!-- BENEFITS -->
-<section class="benefits-section">
-  <span class="section-tag benefits-tag">Benefícios diretos</span>
-  <h2 class="section-title fade-up">O que você pode fazer <span style="color:var(--orange)">com isso</span> 💰</h2>
-  <p class="section-sub fade-up">Além de criar festas lindas para a família...</p>
 
-  <div class="benefits-list">
-    <div class="benefit-row fade-up">
-      <div class="benefit-check">✓</div>
-      <div>
-        <div class="benefit-text">🏠 Fazer suas próprias festas gastando muito menos</div>
-        <div class="benefit-sub">Economize centenas de reais em decoração personalizada</div>
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <span class="section-tag testimonials-tag">💬 Depoimentos</span>
+  <h2 class="section-title fade-up">O que nossas <span style="color:var(--pink)">festeiras</span> falam 🌟</h2>
+  <p class="section-sub fade-up">Mais de 3.200 mães e empreendedoras já transformaram suas festas</p>
+
+  <div class="testimonials-grid">
+    <div class="testimonial-card fade-up">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"Comprei sem acreditar muito, mas me surpreendi demais! Editei o kit do tema Unicórnio em 15 minutos pelo celular. A festa ficou linda e todo mundo perguntando onde comprei a decoração!"</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar" style="--avatar-bg:linear-gradient(135deg,#FF3D9A,#FF6BB5)">👩</div>
+        <div>
+          <div class="testimonial-name">Camila Rocha</div>
+          <div class="testimonial-location">São Paulo, SP</div>
+        </div>
       </div>
     </div>
-    <div class="benefit-row fade-up">
-      <div class="benefit-check">✓</div>
-      <div>
-        <div class="benefit-text">💼 Começar a vender kits personalizados hoje mesmo</div>
-        <div class="benefit-sub">Use como base para vender serviços de personalização de festas</div>
+
+    <div class="testimonial-card fade-up">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"Sou mãe de 3 filhos e sempre gastava muito com decoração. Com esses kits economizei mais de R$400 na última festa! Super fácil de editar, até quem não entende de design consegue."</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar" style="--avatar-bg:linear-gradient(135deg,#9B5DE5,#C084FC)">👩‍👦</div>
+        <div>
+          <div class="testimonial-name">Fernanda Lima</div>
+          <div class="testimonial-location">Belo Horizonte, MG</div>
+        </div>
       </div>
     </div>
-    <div class="benefit-row fade-up">
-      <div class="benefit-check">✓</div>
-      <div>
-        <div class="benefit-text">💰 Criar uma renda extra com papelaria digital</div>
-        <div class="benefit-sub">Mercado de papelaria digital em pleno crescimento no Brasil</div>
+
+    <div class="testimonial-card fade-up">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"Comecei a vender kits personalizados depois de comprar esse material. Já fiz quase R$2.000 em um mês só vendendo pelo Instagram. Melhor investimento que fiz!"</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar" style="--avatar-bg:linear-gradient(135deg,#FFD600,#FF6B35)">💼</div>
+        <div>
+          <div class="testimonial-name">Juliana Mendes</div>
+          <div class="testimonial-location">Fortaleza, CE</div>
+        </div>
       </div>
     </div>
-    <div class="benefit-row fade-up">
-      <div class="benefit-check">✓</div>
-      <div>
-        <div class="benefit-text">⏱️ Economizar horas de trabalho criativo</div>
-        <div class="benefit-sub">Arte pronta = você foca só na personalização e entrega</div>
+
+    <div class="testimonial-card fade-up">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"Nunca havia mexido no Canva antes. Com os tutoriais inclusos aprendi em menos de 30 minutos. A qualidade dos kits é incrível, parece que foi feito por designer profissional!"</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar" style="--avatar-bg:linear-gradient(135deg,#00C9FF,#7FDFFF)">🎨</div>
+        <div>
+          <div class="testimonial-name">Patrícia Souza</div>
+          <div class="testimonial-location">Recife, PE</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card fade-up">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"Fiz a festinha de 1 aninho do meu filho com tema Safari. Ficou tão bonito que os convidados não acreditaram que eu mesma fiz. Valeu cada centavo, com certeza vou comprar mais!"</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar" style="--avatar-bg:linear-gradient(135deg,#FF6B35,#FFD600)">🎂</div>
+        <div>
+          <div class="testimonial-name">Mariana Costa</div>
+          <div class="testimonial-location">Curitiba, PR</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card fade-up">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"Já indiquei para mais de 10 amigas! A variedade de temas é gigante, tem para todo tipo de festa. E o suporte quando tive dúvida foi super rápido e atencioso. Recomendo demais!"</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar" style="--avatar-bg:linear-gradient(135deg,#00E676,#00C9FF)">⭐</div>
+        <div>
+          <div class="testimonial-name">Renata Alves</div>
+          <div class="testimonial-location">Porto Alegre, RS</div>
+        </div>
       </div>
     </div>
   </div>
@@ -1209,18 +1335,6 @@ const obs = new IntersectionObserver(entries=>{
 },{threshold:.1});
 document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
 
-// VIDEO PLACEHOLDER (substituir pela URL real do vídeo)
-function loadVideo() {
-  const block = document.getElementById('videoBlock');
-  block.innerHTML = `
-    <iframe 
-      width="100%" 
-      style="aspect-ratio:16/9;border:none"
-      src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
-      allow="autoplay; fullscreen"
-      allowfullscreen>
-    </iframe>`;
-}
 </script>
 </body>
 </html>
