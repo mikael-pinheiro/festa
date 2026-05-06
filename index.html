@@ -766,6 +766,179 @@ section { position: relative; z-index: 1; }
   font-weight: 700;
 }
 
+/* PRICING GRID */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+@media(max-width:680px){
+  .pricing-grid { grid-template-columns: 1fr; }
+}
+
+.price-card.premium {
+  border: 3px solid var(--yellow);
+  box-shadow: 0 30px 80px rgba(0,0,0,.4), 0 0 0 1px var(--yellow);
+}
+
+.price-card.premium::before {
+  background: linear-gradient(90deg, var(--yellow), var(--orange), var(--pink), var(--purple));
+}
+
+.premium-top-badge {
+  background: linear-gradient(135deg, var(--yellow), var(--orange));
+  color: var(--dark);
+  font-size: .75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  padding: 7px 0;
+  text-align: center;
+  margin: -48px -40px 24px;
+  position: relative;
+}
+
+/* POPUP */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(10,4,20,.82);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.popup-overlay.active { display: flex; }
+
+.popup-modal {
+  background: white;
+  border-radius: 28px;
+  padding: 40px 32px 32px;
+  max-width: 420px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 32px 100px rgba(0,0,0,.5);
+  animation: popIn .35s cubic-bezier(.175,.885,.32,1.275) both;
+}
+
+.popup-modal::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--yellow), var(--orange), var(--pink));
+}
+
+.popup-close {
+  position: absolute;
+  top: 14px; right: 16px;
+  background: #F0E8F8;
+  border: none;
+  border-radius: 50%;
+  width: 30px; height: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  color: #6B5B7B;
+  transition: background .2s;
+}
+
+.popup-close:hover { background: #E0D0F0; }
+
+.popup-emoji { font-size: 2.8rem; margin-bottom: 8px; display: block; }
+
+.popup-modal h3 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.6rem;
+  color: var(--dark);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.popup-modal p {
+  font-size: .9rem;
+  color: #6B5B7B;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+.popup-price-old {
+  font-size: .9rem;
+  color: #999;
+  text-decoration: line-through;
+  margin-bottom: 2px;
+}
+
+.popup-price-new {
+  font-family: 'Fredoka One', cursive;
+  font-size: 3.2rem;
+  color: var(--dark);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.popup-price-note {
+  font-size: .78rem;
+  color: #9B8BAB;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.popup-feats {
+  text-align: left;
+  background: #FFF8FC;
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  font-size: .83rem;
+  color: var(--dark);
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.popup-feats span { display: flex; align-items: center; gap: 8px; }
+
+.popup-btn-yes {
+  display: block;
+  width: 100%;
+  background: linear-gradient(135deg, var(--yellow), var(--orange));
+  color: var(--dark);
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.1rem;
+  padding: 16px;
+  border-radius: 60px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 0 6px 24px rgba(255,214,0,.4);
+  transition: transform .15s, box-shadow .15s;
+  margin-bottom: 10px;
+}
+
+.popup-btn-yes:hover { transform: translateY(-2px); }
+
+.popup-btn-no {
+  background: none;
+  border: none;
+  font-size: .8rem;
+  color: #9B8BAB;
+  cursor: pointer;
+  text-decoration: underline;
+  width: 100%;
+  padding: 4px;
+}
+
 /* GUARANTEE */
 .guarantee-section {
   padding: 56px 24px;
@@ -937,7 +1110,7 @@ footer {
 <div class="confetti-bg" id="confetti-bg"></div>
 
 <!-- TOP RIBBON -->
-<div class="top-ribbon">🎉 OFERTA RELÂMPAGO · Últimas vagas a R$ 11,99 · Acesso Vitalício 🎉</div>
+<div class="top-ribbon">⏰ Oferta válida somente hoje · 06/05/2026 · Encerra em: <span id="ribbon-h">23</span>:<span id="ribbon-m">59</span>:<span id="ribbon-s">59</span></div>
 
 <!-- HERO -->
 <section class="hero">
@@ -1240,31 +1413,91 @@ footer {
     </div>
   </div>
 
-  <div class="price-card fade-up">
-    <div class="price-card-badge">🔥 PROMOÇÃO</div>
+  <div class="pricing-grid fade-up">
 
-    <p class="old-price">De R$ 97,00 por apenas</p>
-    <div class="new-price"><sup>R$</sup>11<span style="font-size:2rem">,99</span></div>
-    <p class="price-note">Pagamento único · Acesso vitalício completo</p>
+    <!-- PLANO BÁSICO -->
+    <div class="price-card">
+      <div class="price-card-badge">🔥 PROMOÇÃO</div>
 
-    <div class="price-divider"></div>
+      <p class="old-price">De R$ 97,00 por apenas</p>
+      <div class="new-price"><sup>R$</sup>10<span style="font-size:2rem">,00</span></div>
+      <p class="price-note">Pagamento único · Acesso vitalício</p>
 
-    <div class="price-features">
-      <div class="price-feat"><span class="price-feat-icon">✓</span> +200 Kits Festa Editáveis</div>
-      <div class="price-feat"><span class="price-feat-icon">✓</span> Temas infantis, adultos e datas comemorativas</div>
-      <div class="price-feat"><span class="price-feat-icon">✓</span> 100% editável no Canva (celular ou PC)</div>
-      <div class="price-feat"><span class="price-feat-icon">✓</span> Acesso imediato após a compra</div>
-      <div class="price-feat"><span class="price-feat-icon">✓</span> Aulas de edição passo a passo</div>
-      <div class="price-feat"><span class="price-feat-icon">✓</span> Atualizações futuras inclusas</div>
+      <div class="price-divider"></div>
+
+      <div class="price-features">
+        <div class="price-feat"><span class="price-feat-icon">✓</span> +200 Kits Festa Editáveis</div>
+        <div class="price-feat"><span class="price-feat-icon">✓</span> Temas infantis, adultos e datas comemorativas</div>
+        <div class="price-feat"><span class="price-feat-icon">✓</span> 100% editável no Canva (celular ou PC)</div>
+        <div class="price-feat"><span class="price-feat-icon">✓</span> Acesso imediato após a compra</div>
+        <div class="price-feat"><span class="price-feat-icon">✓</span> Aulas de edição passo a passo</div>
+        <div class="price-feat"><span class="price-feat-icon">✓</span> Atualizações futuras inclusas</div>
+      </div>
+
+      <button class="btn-buy" onclick="openUpsellPopup()">🎉 QUERO MEUS +200 KITS!</button>
+
+      <div class="guarantee-mini">
+        🔒 Pagamento seguro &nbsp;|&nbsp; ✅ Garantia 7 dias
+      </div>
     </div>
 
-    <a href="https://app.bancobabylon.com/payment/checkout/9598c4db-257a-4cf2-ac88-002b37b066e2" class="btn-buy" target="_blank">🎉 QUERO MEUS +200 KITS AGORA!</a>
+    <!-- PLANO PREMIUM -->
+    <div class="price-card premium">
+      <div class="premium-top-badge">⭐ MAIS COMPLETO · RECOMENDADO</div>
+      <div class="price-card-badge" style="background:linear-gradient(135deg,var(--yellow),var(--orange));color:var(--dark)">⭐ PREMIUM</div>
 
-    <div class="guarantee-mini">
-      🔒 Pagamento seguro &nbsp;|&nbsp; ✅ Garantia 7 dias
+      <p class="old-price">De R$ 197,00 por apenas</p>
+      <div class="new-price"><sup>R$</sup>19<span style="font-size:2rem">,90</span></div>
+      <p class="price-note">Pagamento único · Tudo + Bônus Exclusivos</p>
+
+      <div class="price-divider"></div>
+
+      <div class="price-features">
+        <div class="price-feat"><span class="price-feat-icon" style="background:linear-gradient(135deg,var(--yellow),var(--orange))">✓</span> +200 Kits Festa Editáveis</div>
+        <div class="price-feat"><span class="price-feat-icon" style="background:linear-gradient(135deg,var(--yellow),var(--orange))">✓</span> Temas infantis, adultos e datas comemorativas</div>
+        <div class="price-feat"><span class="price-feat-icon" style="background:linear-gradient(135deg,var(--yellow),var(--orange))">✓</span> 100% editável no Canva (celular ou PC)</div>
+        <div class="price-feat"><span class="price-feat-icon" style="background:linear-gradient(135deg,var(--yellow),var(--orange))">✓</span> Acesso imediato após a compra</div>
+        <div class="price-feat"><span class="price-feat-icon" style="background:linear-gradient(135deg,var(--yellow),var(--orange))">✓</span> Aulas de edição passo a passo</div>
+        <div class="price-feat"><span class="price-feat-icon" style="background:linear-gradient(135deg,var(--yellow),var(--orange))">✓</span> Atualizações futuras inclusas</div>
+        <div class="price-feat"><span class="price-feat-icon" style="background:linear-gradient(135deg,var(--pink),var(--purple))">🎁</span> <strong>Bônus: 50 Artes Prontas para Vender</strong></div>
+        <div class="price-feat"><span class="price-feat-icon" style="background:linear-gradient(135deg,var(--pink),var(--purple))">🎁</span> <strong>Bônus: Guia de Precificação de Festas</strong></div>
+        <div class="price-feat"><span class="price-feat-icon" style="background:linear-gradient(135deg,var(--pink),var(--purple))">🎁</span> <strong>Bônus: Grupo VIP no WhatsApp</strong></div>
+      </div>
+
+      <a href="https://app.bancobabylon.com/payment/checkout/9598c4db-257a-4cf2-ac88-002b37b066e2" class="btn-buy" target="_blank" style="background:linear-gradient(135deg,var(--yellow),var(--orange));color:var(--dark);box-shadow:0 8px 32px rgba(255,214,0,.5)">⭐ QUERO O PLANO PREMIUM!</a>
+
+      <div class="guarantee-mini">
+        🔒 Pagamento seguro &nbsp;|&nbsp; ✅ Garantia 7 dias
+      </div>
     </div>
+
   </div>
 </section>
+
+<!-- POPUP UPSELL -->
+<div class="popup-overlay" id="upsellPopup">
+  <div class="popup-modal">
+    <button class="popup-close" onclick="closeUpsellPopup()">✕</button>
+    <span class="popup-emoji">🎉</span>
+    <h3>Espera! Temos uma oferta especial para você</h3>
+    <p>Antes de ir com o plano básico, que tal levar <strong>tudo + os bônus exclusivos</strong> por apenas <strong style="color:var(--pink)">R$ 13,00</strong>?</p>
+
+    <p class="popup-price-old">Plano Premium de R$ 19,90</p>
+    <div class="popup-price-new"><sup style="font-size:1.2rem">R$</sup>13<span style="font-size:1.6rem">,00</span></div>
+    <p class="popup-price-note">Oferta exclusiva · Só aparece uma vez!</p>
+
+    <div class="popup-feats">
+      <span>✅ +200 Kits Festa Editáveis</span>
+      <span>🎁 Bônus: 50 Artes Prontas para Vender</span>
+      <span>🎁 Bônus: Guia de Precificação de Festas</span>
+      <span>🎁 Bônus: Grupo VIP no WhatsApp</span>
+      <span>✅ Aulas de edição passo a passo</span>
+    </div>
+
+    <a href="https://app.bancobabylon.com/payment/checkout/9598c4db-257a-4cf2-ac88-002b37b066e2" class="popup-btn-yes" target="_blank">🚀 SIM! QUERO POR R$ 13,00!</a>
+    <button class="popup-btn-no" onclick="goToBasicCheckout()">Não, prefiro o plano básico por R$ 10,00</button>
+  </div>
+</div>
 
 <!-- GUARANTEE -->
 <section class="guarantee-section">
@@ -1309,7 +1542,25 @@ for (let i = 0; i < 40; i++) {
   confettiContainer.appendChild(el);
 }
 
-// COUNTDOWN
+// RIBBON COUNTDOWN (até meia-noite de hoje)
+function getRibbonSecs() {
+  const now = new Date();
+  const midnight = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59);
+  return Math.max(0, Math.floor((midnight - now) / 1000));
+}
+let ribbonSecs = getRibbonSecs();
+function tickRibbon() {
+  ribbonSecs = Math.max(0, ribbonSecs - 1);
+  const h = Math.floor(ribbonSecs / 3600);
+  const m = Math.floor((ribbonSecs % 3600) / 60);
+  const s = ribbonSecs % 60;
+  document.getElementById('ribbon-h').textContent = String(h).padStart(2,'0');
+  document.getElementById('ribbon-m').textContent = String(m).padStart(2,'0');
+  document.getElementById('ribbon-s').textContent = String(s).padStart(2,'0');
+}
+setInterval(tickRibbon, 1000);
+
+// COUNTDOWN (pricing section)
 let secs = 2*3600 + 59*60 + 59;
 function tick(){
   secs = Math.max(0, secs-1);
@@ -1321,6 +1572,23 @@ function tick(){
   document.getElementById('cd-s').textContent = String(s).padStart(2,'0');
 }
 setInterval(tick, 1000);
+
+// POPUP UPSELL
+function openUpsellPopup() {
+  document.getElementById('upsellPopup').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeUpsellPopup() {
+  document.getElementById('upsellPopup').classList.remove('active');
+  document.body.style.overflow = '';
+}
+function goToBasicCheckout() {
+  closeUpsellPopup();
+  window.open('https://app.bancobabylon.com/payment/checkout/9598c4db-257a-4cf2-ac88-002b37b066e2', '_blank');
+}
+document.getElementById('upsellPopup').addEventListener('click', function(e) {
+  if (e.target === this) closeUpsellPopup();
+});
 
 // SCROLL FADE
 const obs = new IntersectionObserver(entries=>{
